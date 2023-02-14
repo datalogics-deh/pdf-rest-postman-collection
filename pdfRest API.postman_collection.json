@@ -1187,6 +1187,86 @@
 				}
 			],
 			"description": "Quickly and easily convert Word, Excel, PowerPoint, BMP, TIF, PNG, and JPG files to standardized PDF documents."
+		},
+		{
+			"name": "Add Image to PDF",
+			"item": [
+				{
+					"name": "Add Image to PDF",
+					"request": {
+						"method": "POST",
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"description": "File to be processed",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "id",
+									"value": "",
+									"description": "Resource ID to be processed",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "image_file",
+									"description": "Image file to be added",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "id",
+									"value": "",
+									"description": "Resource ID of image file to be added",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "output",
+									"value": "add_to_pdf_out",
+									"description": "Output file name (no ext.)",
+									"type": "text"
+								},
+								{
+									"key": "x",
+									"value": "1",
+									"description": "Horizontal position of image (by its lower-left corner) in PDF units",
+									"type": "text"
+								},
+								{
+									"key": "y",
+									"value": "1",
+									"description": "Vertical position of image (by its lower-left corner) in PDF units",
+									"type": "text"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"description": "The page of the input PDF into which the image will be inserted",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.pdfrest.com/pdf-with-added-image",
+							"protocol": "https",
+							"host": [
+								"api",
+								"pdfrest",
+								"com"
+							],
+							"path": [
+								"pdf-with-added-image"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Quickly and easily convert Word, Excel, PowerPoint, BMP, TIF, PNG, and JPG files to standardized PDF documents."
 		}
 	],
 	"auth": {
